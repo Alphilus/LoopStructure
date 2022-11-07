@@ -1,0 +1,31 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Input Line: <input type="number" id="SoSao"/><br>
+    <button type="button" onclick="Triangle()">Vẽ tam giác</button>
+
+    <div id="Ket_Qua"></div>
+
+    <script>
+        function Triangle() {
+            let KetQua = document.getElementById("Ket_Qua");
+            let LineNumber = parseInt(document.getElementById("SoSao").value);
+            let result = "";
+
+            for (let i = 0; i < LineNumber; i++){
+                for (let j = 0; j <= i; j++) {
+                    result = result + "*";
+                }
+                result = result + "<br>";
+            }
+            KetQua.innerHTML = "";
+            KetQua.innerHTML = result;
+        }
+    </script>
+</body>
+</html>
